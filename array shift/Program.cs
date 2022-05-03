@@ -18,8 +18,10 @@ namespace array_shift
             {
                 int arrayLast = array[namber - 1];
                 for (int j = namber - 1; j > 0; j--)
+                {
                     array[j] = array[j - 1];
-                array[0] = arrayLast;
+                    array[0] = arrayLast;
+                }
             }
             Console.WriteLine("Новый массив: ");
             for (int i = 0; i < namber; ++i)
