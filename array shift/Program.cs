@@ -6,8 +6,7 @@ namespace array_shift
     {
         static void Main(string[] args)
         {
-            const int namber = 7;
-            int[] array = new int[namber] { 1, 2, 3, 4, 5, 6, 7 };
+            int[] array ={ 1, 2, 3, 4, 5, 6, 7 };
             foreach (var item in array)
             {
                 Console.Write(item + " ");
@@ -16,15 +15,13 @@ namespace array_shift
             int left = int.Parse(Console.ReadLine());
             for (int i = 0; i < left; ++i)
             {
-                int arrayLast = array[namber - 1];
-                for (int j = namber - 1; j > 0; j--)
-                {
+                int arrayLast = array[array.Length - 1];
+                for (int j = array.Length - 1; j > 0; j--)
                     array[j] = array[j - 1];
                     array[0] = arrayLast;
-                }
             }
             Console.WriteLine("Новый массив: ");
-            for (int i = 0; i < namber; ++i)
+            for (int i = 0; i < array.Length; ++i)
             {
                 Console.Write(" " + array[i]);
             }
